@@ -1,3 +1,4 @@
+```css
 /* General Reset */
 * {
     margin: 0;
@@ -7,7 +8,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #f4c2c2; /* Baby pink background */
     padding: 2rem;
     min-height: 100vh;
     display: flex;
@@ -23,14 +24,12 @@ body {
     max-width: 1200px;
 }
 
-
-
 /* Card Styling */
 .card {
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(244, 194, 194, 0.2), 0 1px 3px rgba(244, 194, 194, 0.1);
     width: 100%; 
     max-width: 500px;
 }
@@ -92,8 +91,8 @@ body {
 
 .input-wrapper input:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #f4c2c2;
+    box-shadow: 0 0 0 3px rgba(244, 194, 194, 0.2);
 }
 
 small {
@@ -103,49 +102,51 @@ small {
     display: block;
 }
 
-/* Buttons */
+/* Buttons - Baby pink theme */
 .btn-submit {
     width: 100%;
-    background-color: #2563eb;
-    color: white;
+    background: linear-gradient(135deg, #f4c2c2, #ffb6c1);
+    color: #5a2d47;
     border: none;
     padding: 0.875rem;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s;
     font-size: 1rem;
 }
 
 .btn-submit:hover {
-    background-color: #1d4ed8;
+    background: linear-gradient(135deg, #ffb6c1, #f4c2c2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(244, 194, 194, 0.4);
 }
 
 .btn-export {
-    background-color: #059669;
-    color: white;
+    background-color: #f8b5c9;
+    color: #5a2d47;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 
 .btn-export:disabled {
-    background-color: #9ca3af;
+    background-color: #f4c2c2;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
 .btn-export:hover:not(:disabled) {
-    background-color: #047857;
+    background-color: #ffb6c1;
 }
 
 /* Table Styles */
 .table-container {
     overflow-x: auto;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #f4c2c2;
     border-radius: 8px;
 }
 
@@ -156,16 +157,16 @@ table {
 }
 
 th {
-    background-color: #f9fafb;
+    background-color: #fce4e8;
     padding: 0.75rem 1rem;
     font-weight: 600;
-    color: #374151;
-    border-bottom: 1px solid #e5e7eb;
+    color: #5a2d47;
+    border-bottom: 1px solid #f4c2c2;
 }
 
 td {
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #f4c2c2;
     color: #4b5563;
 }
 
@@ -184,9 +185,9 @@ tr:last-child td {
 .alert {
     margin-top: 1rem;
     padding: 0.75rem;
-    background-color: #ecfdf5;
-    color: #065f46;
-    border: 1px solid #a7f3d0;
+    background-color: #fce4e8;
+    color: #5a2d47;
+    border: 1px solid #f4c2c2;
     border-radius: 8px;
     text-align: center;
     font-size: 0.9rem;
@@ -195,3 +196,8 @@ tr:last-child td {
 .hidden {
     display: none;
 }
+```
+
+Save this as your `static/style.css` file. The baby pink theme (`#f4c2c2`) now applies to the body background, buttons, focus states, table borders, and alerts while maintaining excellent readability with white cards.[1]
+
+[1](https://encycolorpedia.com/f4c2c2)
