@@ -1,12 +1,13 @@
 from flask import Blueprint, request, jsonify
 from .models import User
 from .database import db
+from flask import render_template
 
 routes = Blueprint("routes", __name__)
 
 @routes.route("/")
 def home():
-    return {"message": "Backend is running!"}
+    return render_template("index.html")
 
 
 @routes.route("/register", methods=["POST"])
