@@ -1,3 +1,6 @@
+//  Render backend URL
+const BASE_URL = "https://clubregpage.onrender.com";
+
 // Select DOM elements
 const form = document.getElementById('studentForm');
 const tableBody = document.getElementById('tableBody');
@@ -22,7 +25,7 @@ form.addEventListener('submit', async function(event) {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/register", {
+        const response = await fetch(`${BASE_URL}/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -53,7 +56,7 @@ form.addEventListener('submit', async function(event) {
 // Load table data from backend
 async function loadTableData() {
     try {
-        const response = await fetch("http://127.0.0.1:5000/users");
+        const response = await fetch(`${BASE_URL}/users`);
         const students = await response.json();
 
         tableBody.innerHTML = "";
@@ -79,6 +82,7 @@ async function loadTableData() {
 
     } catch (error) {
         console.error("Error loading data:", error);
+        alert("Unable to load data from server.");
     }
 }
 
