@@ -1,14 +1,9 @@
-//  Render backend URL
+// Render backend URL
 const BASE_URL = "https://clubregpage.onrender.com";
 
 // Select DOM elements
 const form = document.getElementById('studentForm');
-const tableBody = document.getElementById('tableBody');
-const exportBtn = document.getElementById('exportBtn');
 const alertMsg = document.getElementById('alert-msg');
-
-// Load data from backend on page load
-loadTableData();
 
 // Form submission
 form.addEventListener('submit', async function(event) {
@@ -45,7 +40,6 @@ form.addEventListener('submit', async function(event) {
 
         showAlert();
         form.reset();
-        loadTableData();
 
     } catch (error) {
         console.error("Error:", error);
@@ -53,37 +47,10 @@ form.addEventListener('submit', async function(event) {
     }
 });
 
-// Load table data from backend
-async function loadTableData() {
-    try {
-        const response = await fetch(`${BASE_URL}/users`);
-        const students = await response.json();
-
-        tableBody.innerHTML = "";
-
-        if (students.length === 0) {
-            tableBody.innerHTML = `<tr><td colspan="4" class="empty-state">No data added yet</td></tr>`;
-            exportBtn.disabled = true;
-            return;
-        }
-
-        exportBtn.disabled = false;
-
-        students.forEach(student => {
-            tableBody.innerHTML += `
-                <tr>
-                    <td>${student.full_name}</td>
-                    <td>${student.registration_number}</td>
-                    <td>${student.phone}</td>
-                    <td>${student.college_mail}</td>
-                </tr>
-            `;
-        });
-
-    } catch (error) {
-        console.error("Error loading data:", error);
-        alert("Unable to load data from server.");
-    }
+// Dummy function since table is removed
+function loadTableData() {
+    // No table on UI anymore, so nothing to load
+    return;
 }
 
 // Alert

@@ -1,4 +1,4 @@
-```css
+
 /* General Reset */
 * {
     margin: 0;
@@ -196,8 +196,3 @@ tr:last-child td {
 .hidden {
     display: none;
 }
-```
-
-Save this as your `static/style.css` file. The baby pink theme (`#f4c2c2`) now applies to the body background, buttons, focus states, table borders, and alerts while maintaining excellent readability with white cards.[1]
-
-[1](https://encycolorpedia.com/f4c2c2)
