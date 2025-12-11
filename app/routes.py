@@ -60,8 +60,4 @@ def get_all_users():
     ]
     return jsonify(result), 200
 
-@routes.route("/init_db")
-def init_db():
-    from .database import db
-    db.create_all()
-    return "Neon DB initialized!"
+
